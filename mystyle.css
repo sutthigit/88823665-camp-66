@@ -40,9 +40,15 @@ input[type="text"], input[type="date"], textarea, select {
 }
 
 input[type="text"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
-    border-color: #ff0044;
+    border-color: #ed7f9c;
     background-color: #fcdbed;
     outline: none;
+}
+
+input[type="text"]:active, input[type="date"]:active, textarea:active, select:active {
+  border-color: #ff0044;
+  background-color: #fcdbed;
+  outline: none;
 }
 
 input[type="submit"], input[type="reset"] {
