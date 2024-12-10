@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Sriracha&display=swap');
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:	#fcd1d7;
+    font-family: 'Sriracha', cursive;
+    color: #000000;
+}
+
+h1 {
+    text-align: center; 
+    padding: auto;
+    color: rgb(255, 5, 143);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.);
+}
+
+.box1 {
+    background-color: rgb(245, 245, 245);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.box1:hover {
+    background-color: #eba9c4;
+}
+
+input[type="text"], input[type="date"], textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
+    border-color: #ff0044;
+    background-color: #fcdbed;
+    outline: none;
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 5, 143);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #ab2e4f;
+}
+input[type="radio"]:checked{
+  accent-color: #ab2e4f;
+}
+input[type="checkbox"]:checked{
+  accent-color: #ab2e4f;
+}
+input[type="text"]:hover ,input[type="date"]:hover, textarea:hover, select:hover{
+  background-color: #fed1dd;
+}
+
