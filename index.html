@@ -6,10 +6,6 @@
     <meta charset="UTF-8" />
     <link src="css\bootstrap.min.css" rel="stylesheet">
     <style>
-        title{
-            font-size: xx-large;
-    
-        }
        body {
             height: 100vh;
             display: flex;
@@ -37,27 +33,27 @@
         .form-label {
             font-weight: bold;
         }
-        .btn {
-            margin-right: 10px;
-        }
         .mb-3{
             font-size: large;
+        }
+        .star{
+            color: red;
         }
     </style>
 </head>
 
 <body>
     <div class="box1">
-        <h1>Workshop #HTML - FORM</h1>
+    
 
     <div class="container mt-5">
             <form>
-                <div class="mb-3">
-                    <label for="firstName" class="form-label me-2">ชื่อ *</label>
+                <div class="colum mb-3">
+                    <label for="firstName" class="form-label me-2">ชื่อ <span class="star">*</label>
                     <input type="text" class="form-control d-inline-block w-75" id="firstName" placeholder="กรุณาใส่ชื่อ">
                 </div>
-                <div class="mb-3">
-                    <label for="lastName" class="form-label">สกุล *</label>
+                <div class="colum mb-3">
+                    <label for="lastName" class="form-label">สกุล </label>
                     <input type="text" class="form-control" id="lastName" placeholder="กรุณาใส่นามสกุล">
                 </div>
     
@@ -99,7 +95,12 @@
         <!-- สีที่ชอบ -->
         <div class="mb-3">
             <label for="favoriteColor" class="form-label">สีที่ชอบ</label>
-            <input type="text" class="form-control" id="favoriteColor" placeholder="สีที่ชอบ">
+            <select class="form-select">
+                <option selected>เลือกสีที่ชอบ</option>
+                <option value="1">สีแดง</option>
+                <option value="2">สีเหลือง</option>
+                <option value="3">สีน้ำเงิน</option>
+              </select>
         </div>
 
         <!-- เพลงที่ชอบ -->
@@ -126,11 +127,12 @@
         <!-- ปุ่ม -->
         <div class="mt-4">
             <button type="reset" class="btn btn-secondary">Reset</button>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-success">Submit</button>
         </div>
         </form>
         </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
