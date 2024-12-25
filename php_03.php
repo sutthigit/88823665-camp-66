@@ -27,7 +27,7 @@
             
             if (isset($_POST['inputnum']) != null) {
                 $myvar = (int)$_POST['inputnum']; 
-                echo "<h3>ตารางสูตรคูณของแม่ $myvar</h3>";
+                echo "<h3>ตารางสูตรคูณแม่ $myvar</h3>";
                 echo "<ul class='list-group'>";
             
                 //ตาราง
