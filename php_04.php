@@ -9,6 +9,14 @@
             font-family: cursive;
             background-color: #E2FDCB;
         }
+        body{
+            font-family: cursive;
+            background-color: #E2FDCB;
+        }
+        .content{
+            border-radius: 40px;
+            background-color: #fff;
+        }
     </style>
         </body>
             <title>PHP_04</title>

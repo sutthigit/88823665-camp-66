@@ -7,7 +7,15 @@
         body{
             font-family: cursive;
             background-color: #E2FDCB;
-            display: flex
+        }
+        .content{
+            border-radius: 40px;
+            background-color: #fff;
+        }
+        .number-row {
+            padding: 2px;
+            margin-bottom: 2px;
+           
         }
     </style>
 </head>
@@ -17,16 +25,19 @@
         <?php $myvar = 2; 
         echo "<h1>สูตรคูณแม่ $myvar </h1> ";
         ?>
+        <div class="content">
         <?php
         for($i = 1; $i <= 12; $i++){
         ?> 
-        <div class="row">
+        
+        <div class="row number-row">
             <div class="h2 col text-end"> <?php echo $myvar."x".$i ?> = </div>
             <div class="h2 col text-start"> <?php echo $myvar * $i; ?></div>
         </div>
         <?php
         }
         ?>
+        </div>
     </div>
 </body>
 </html>        
