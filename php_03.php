@@ -7,6 +7,7 @@
     <style>
         body{
             font-family: cursive;
+            background-color: #E2FDCB;
         }
     </style>
         </body>

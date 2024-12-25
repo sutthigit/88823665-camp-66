@@ -6,23 +6,38 @@
     <style>
         body{
             font-family: cursive;
+            background-color: #E2FDCB;
+        }
+        .content{
+            border-radius: 40px;
+            background-color: #fff;
+        }
+        .number-row {
+            padding: 2px;
+            margin-bottom: 2px;
+           
         }
     </style>
 </head>
 <body>
     <title>PHP_02</title>
     <div class="container mt-5">
-        <h1>จำนวนคู่คี่ 1 - 100 </h1>
-        <?php
-        for ($i=1; $i<=100 ; $i++) {        
-        ?>
-        <div class="row">
-            <div class="h2 col text-end"> <?php echo "เลข". $i ?></div>
-            <div class="h2 col text-start"> <?php if($i % 2 == 0){echo "จำนวนคู่"; }else{ echo "จำนวนคี่";} ?></div>
+    <h1 class="text-center mb-4">จำนวนคู่คี่ 1 - 100</h1>
+        <div class="content">
+            <br>
+            <?php
+            for ($i=1; $i<=100 ; $i++) {        
+            ?>
+            <div class="row number-row">
+                <div class="h2 col text-end"> <?php echo "เลข". $i ?></div>
+                <div class="h2 col text-start"> <?php if($i % 2 == 0){echo "จำนวนคู่"; }else{ echo "จำนวนคี่";} ?></div>
+            </div>
+            <?php
+            }
+            echo "<br>";
+            ?>
+            <br>
         </div>
-        <?php
-        }
-        ?>
     </div>
 </body>
 </html>        

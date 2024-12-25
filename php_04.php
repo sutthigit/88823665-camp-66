@@ -7,6 +7,7 @@
     <style>
         body{
             font-family: cursive;
+            background-color: #E2FDCB;
         }
     </style>
         </body>
@@ -43,7 +44,7 @@
                     }else{
                         $type = "เลขคี่";
                     }
-                    echo "<li class='list-group-item'>$i เป็น$type</li>";
+                    echo "<li class='list-group-item'>$i เป็น $type</li>";
                 }
                 echo '</ul>';
                 }

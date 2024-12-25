@@ -6,6 +6,8 @@
     <style>
         body{
             font-family: cursive;
+            background-color: #E2FDCB;
+            display: flex
         }
     </style>
 </head>
