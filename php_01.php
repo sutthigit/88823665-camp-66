@@ -6,8 +6,9 @@
 </head>
 <body>
     <div class="container mt-5">
-        <?php $myvar = 2; ?>
-        <h1>สูตรคูณแม่ <?php echo $myvar; ?> </h1>
+        <?php $myvar = 2; 
+        echo "<h1>สูตรคูณแม่ $myvar </h1> ";
+        ?>
         <?php
         for($i = 1; $i <= 12; $i++){
         ?> 
