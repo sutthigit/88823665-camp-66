@@ -1,5 +1,4 @@
 
-@section('title', __('Not Found A Page'))
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,5 @@
 
-@section('title', __('Server Error Cannot Connect'))
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,7 +51,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="illustration">🔥</div>
+        <div class="illustration">🌐</div>
         <h1>500</h1>
         <p>Sorry! Something went wrong on our end.</p>
     </div>
