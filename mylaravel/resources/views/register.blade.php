@@ -15,14 +15,32 @@
                     <div class="input-group mb-3">
                         <input type="text" name="name" id="name" class="form-control" placeholder="Full Name" />
                         <div class="input-group-text"><span class="bi bi-person"></span></div>
+                        <div class="valid-feedback">
+                            OK
+                        </div>
+                        <div class="invalid-feedback">
+                            กรุณากรอก ชื่อ
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="email" name="email" id="email" class="form-control" placeholder="Email" />
                         <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+                        <div class="valid-feedback">
+                            OK
+                        </div>
+                        <div class="invalid-feedback">
+                            กรุณากรอก email
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="password" name="password" id="pass" class="form-control" placeholder="Password" />
                         <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+                        <div class="valid-feedback">
+                            OK
+                        </div>
+                        <div class="invalid-feedback">
+                            กรุณากรอก รหัสผ่าน
+                        </div>
                     </div>
                     <!--begin::Row-->
                     <div class="row">
@@ -32,7 +50,14 @@
                                 <label class="form-check-label" for="flexCheckDefault">
                                     I agree to the <a href="#">terms</a>
                                 </label>
+                                <div class="valid-feedback">
+                                    OK
+                                </div>
+                                <div class="invalid-feedback">
+                                    กรุณาอ่านข้อตกลงและกดยืนยัน
+                                </div>
                             </div>
+
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
