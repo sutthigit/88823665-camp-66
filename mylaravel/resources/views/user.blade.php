@@ -57,11 +57,11 @@
                                     <a href="{{ url('/user/'.$user->id)}}">
                                     <button class="btn btn-warning">Edit</button>
                                     </a>
-                                    <form action="{{ url('/user/')}}" method="post" style="display: inline">
+                                    <form action="{{ url('/user/')}}" method="post" style="display: inline" onsubmit="return clickme(this);">
                                         @csrf
-                                        @method('delete')
                                     <input type="hidden" name="id" value="{{ $user->id}}">
-                                    <button class="btn btn-danger">Delete</button>
+                                    <button class="btn btn-danger" >Delete</button>
+                                    @method('delete')
                                     </form>
                                   </td>
                                 </tr>
@@ -93,4 +93,47 @@
               @include('components.footer')
         </div>
     </div>
+
 @endsection
+
+@section('scripts')
+<script>
+    function clickme(form) {
+        const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: "btn btn-success",
+    cancelButton: "btn btn-danger"
+  },
+  buttonsStyling: false
+});
+swalWithBootstrapButtons.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonText: "Yes, delete it!",
+  cancelButtonText: "No, cancel!",
+  reverseButtons: true
+}).then((result) => {
+  if (result.isConfirmed) {
+    swalWithBootstrapButtons.fire({
+      title: "Deleted!",
+      text: "Your user has been deleted.",
+      icon: "success"
+    });
+    form.submit();
+  } else if (
+    result.dismiss === Swal.DismissReason.cancel
+  ) {
+    swalWithBootstrapButtons.fire({
+      title: "Cancelled",
+      text: "Your user is safe :)",
+      icon: "error"
+    });
+  }
+});
+        return false;
+    }
+</script>
+@endsection
+
