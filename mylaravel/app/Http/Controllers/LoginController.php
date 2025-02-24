@@ -17,11 +17,10 @@ class LoginController extends Controller
         // print_r($req->password);
         // return redirect('/');
         $user = User::where('email',$req->email)->first();
-
-        if(Hash::check($req->password, $user->password)){
+        if($user && $req->password && Hash::check($req->password, $user->password)){
             session()->forget('error');
-            session(['$user' => $user]);
-            return redirect('/');
+            session(['user' => $user]);
+            return redirect('/home');
         }else{
             session(['error' => 'ข้อมูลการเข้าสู่ระบบไม่ถูกต้อง']);
             return view('login',['email' =>$req->email]);

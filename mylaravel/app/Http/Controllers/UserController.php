@@ -24,11 +24,11 @@ class UserController extends Controller
         $user->email = $req->email;
         $user->password = $req->password;
         $user->save();
-        return redirect('/users');
+        return redirect('/user');
     }
 
     function delete(Request $req){
        User::destroy($req->id);
-       return redirect ('/users');
+       return redirect ('/user');
     }
 }

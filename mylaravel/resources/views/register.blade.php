@@ -139,6 +139,7 @@ function clickme(){
     if (!passwordPattern.test(passwordValue)) {
         password.classList.add("is-invalid");
         isValid = false;
+
     } else {
         password.classList.remove("is-invalid");
     }

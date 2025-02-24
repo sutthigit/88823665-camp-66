@@ -20,7 +20,7 @@ Route::get('/hello',function(){
     return "<h1>Hello World!</h1>";
 });
 
-Route::get("/",[HomeController::class,'index'])->middleware([CheckLogin::class]);
+Route::get('/',action: [HomeController::class,'index'])->middleware([CheckLogin::class]);
 
 Route::get("/home",function(){
     return view("home");
@@ -34,15 +34,19 @@ Route::post("/newcontrol/{id?}",[NewControl ::class,'multitable']);
 
 Route::get("/login",[LoginController::class,'index']);
 Route::post("/login",[LoginController::class,'login']);
-Route::get("/logout",[LoginController::class,'index']);
+
+Route::get("/logout",function(){
+    session()->forget('user');
+    return redirect('/login');
+});
 
 
 Route::get("/register",[RegisterController::class,'index']);
 Route::post("/register",[RegisterController::class,'create']);
 
 
-
-Route::get("/users",[UserController::class,'index']);
+Route::get("/user",[UserController::class,'index']);
 Route::get("/user/{id}",[UserController::class,'edit']);
 Route::put("/user",[UserController::class,'edit_action']);
 Route::delete("/user",[UserController::class,'delete']);
+
